@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.Provinsi.CovidProvinsiDetail">
+
+    <View
+        android:id="@+id/kasus_header"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@drawable/pv"
+        android:maxHeight="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/kasus_bg"
+        android:layout_below="@id/kasus_header"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:background="@drawable/kasus_bg_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/kasus_header"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutPr"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+        <TextView
+            android:id="@+id/tvDetailProvinsiNama"
+            style="@style/TotalFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            tools:text="Jawa Timur"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardKasus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutPr"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="18dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+
+            <!--            container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!--                col 1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/ic_virus" />
+
+                    <TextView
+                        android:id="@+id/tvDetailTotalPositif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        tools:text="12223"
+                        android:textColor="@color/colorTotalDeaths"
+                        android:textSize="28dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/card_positif"
+                        android:textColor="@color/colorTotalDeaths"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <!--                col 2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/ic_heart" />
+
+                    <TextView
+                        android:id="@+id/tvDetailTotalSembuh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        tools:text="23"
+                        android:textColor="@color/colorTotalRecovered"
+                        android:textSize="28dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/card_sembuh"
+                        android:textColor="@color/colorTotalRecovered"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <!--                col 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/ic_cross" />
+
+                    <TextView
+                        android:id="@+id/tvDetailTotalMeninggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        tools:text="234"
+                        android:textColor="@color/colorTotalConfirmed"
+                        android:textSize="28dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/card_meninggal"
+                        android:textColor="@color/colorTotalConfirmed"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.Tentang.KasusCountry">
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutTotalNegara"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvTotalNegara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="67 Negara"
+            android:textColor="#fff"
+            style="@style/TotalFontStyle"
+            android:textSize="23sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCovidNegara"
+        android:layout_below="@id/LinearLayoutTotalNegara"
+        tools:listitem="@layout/item_list_covid_provinsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress_circular_provinsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:indeterminate="true"/>
+
+</RelativeLayout>

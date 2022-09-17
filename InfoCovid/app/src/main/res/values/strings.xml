@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pantau Covid-19</string>
+    <string name="title_activity_splash">Home</string>
+    <string name="title_home">Kasus</string>
+    <string name="title_Provinsi">Provinsi</string>
+    <string name="title_Tentang">Tentang</string>
+
+
+    <string name="card_positif">Positif</string>
+    <string name="card_sembuh">Sembuh</string>
+    <string name="card_meninggal">Meninggal</string>
+    <string name="update_tittle">Update Terbaru</string>
+    <string name="update_time">Data terbaru kasus COVID-19</string>
+    <string name="view_detail">Lihat Detail</string>
+    <string name="arrow"><![CDATA[>]]></string>
+    <string name="daftar_kasus_tiap_negara">Daftar kasus tiap Negara</string>
+    <string name="live_data_tiap_negara">Live Data Tiap Negara</string>
+    <string name="tv_negara">Negara</string>
+    <string name="aku">Akbar Imawan Dwi Cahya</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

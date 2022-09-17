@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.Tentang.TentangKu">
+
+    <View
+        android:id="@+id/kasus_header"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@drawable/pv"
+        android:maxHeight="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/kasus_bg"
+        android:layout_below="@id/kasus_header"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:background="@drawable/kasus_bg_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/kasus_header"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:id="@+id/sumberapi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txapi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sumber Api"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="23dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#050505"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:id="@+id/txsumber"
+                android:layout_below="@id/txapi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Api yang digunakan diunduh melalui situs kawalcorona.com"/>
+
+            <TextView
+                android:layout_below="@id/txsumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pembuat Aplikasi"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="23dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#050505"
+                android:layout_marginTop="25sp"/>
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_list_tentang"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/sumberapi"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="18dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon_user"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_daftar_negara"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/aku"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
